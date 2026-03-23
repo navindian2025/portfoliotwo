@@ -10,22 +10,22 @@ const MyServices = () => {
     <div className="grid grid-cols-1 md:grid-cols-2">
       <ServicesCard
         icons={<BiCodeAlt />}
-        title="Web Development"
+        title="API Development"
         subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
       <ServicesCard
         icons={<SiAntdesign />}
-        title="Web Design"
+        title="API Design"
         subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
       <ServicesCard
         icons={<AiTwotoneAppstore />}
-        title="Mobile Application"
+        title="API Testing"
         subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
       <ServicesCard
         icons={<FaAppStoreIos />}
-        title="SEO"
+        title="API Deployment"
         subTitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
     </div>

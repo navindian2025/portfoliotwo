@@ -8,57 +8,77 @@ import {
   workImgSix,
   workImgSeven,
   workImgEight,
+  workImgOnev3,
 } from "../../assets";
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
 
 const Projects = () => {
   return (
-    <div>
+    <div className="py-10">
       <Title title="Recent" subTitle="Projects" />
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lgl:gap-10">
-        <div className="px-6">
+
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lgl:gap-10 mt-6">
+        
+        {/* LEFT SIDE */}
+        <div className="px-4 space-y-6">
           <ProjectsCard
-            title="Blog Website"
-            category="Website"
-            image={workImgThree}
+            title="Cloud-Native Microservices Platform"
+            category="Java • Spring Boot • Kubernetes"
+            image={workImgOnev3}
+            imageClass="w-full h-72"
           />
+
           <ProjectsCard
-            title="Business Card Design"
-            category="Design"
+            title="Enterprise API Development"
+            category="REST APIs • Microservices"
             image={workImgOne}
+            imageClass="w-full h-72"
           />
+
           <ProjectsCard
-            title="Infinity Logo"
-            category="Logo"
+            title="Distributed Event-Driven System"
+            category="Kafka • Event Streaming"
             image={workImgTwo}
+            imageClass="w-full h-72"
           />
+
           <ProjectsCard
-            title="Mobile Application"
-            category="Shopping"
+            title="Production Monitoring System"
+            category="Grafana • Prometheus • ELK"
             image={workImgFive}
+            imageClass="w-full h-72"
           />
         </div>
-        <div className="px-6">
+
+        {/* RIGHT SIDE */}
+        <div className="px-4 space-y-6">
           <ProjectsCard
-            title="Responsive website"
-            category="E-commerce"
+            title="Legacy System Modernization"
+            category="Monolith → Microservices"
             image={workImgFour}
+            imageClass="w-full h-72"
           />
+
           <ProjectsCard
-            title="Grapic Design"
-            category="Design"
+            title="Cloud Deployment Pipeline"
+            category="Docker • Kubernetes • CI/CD"
             image={workImgSix}
+            imageClass="w-full h-72"
           />
+
           <ProjectsCard
-            title="Ideas & Blog"
-            category="Website"
+            title="High-Performance Backend System"
+            category="Java • Performance Tuning"
             image={workImgEight}
+            imageClass="w-full h-72"
           />
+
           <ProjectsCard
-            title="ZOSS Logo"
-            category="Logo"
+            title="Database Optimization & RCA"
+            category="SQL • PL/SQL • Debugging"
             image={workImgSeven}
+            imageClass="w-full h-72"
           />
         </div>
       </div>

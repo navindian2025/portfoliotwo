@@ -8,174 +8,111 @@ import ResumeTitle from "./ResumeTitle";
 
 const Skills = () => {
   return (
-    <div className="w-full grid grid-cols-9 gap-10 lgl:gap-0 px-6">
-      {/* =============== Design and Languages Start here =================== */}
+    <div className="w-full grid grid-cols-9 gap-8 px-6">
+
+      {/* =============== CORE / BACKEND =================== */}
       <div className="col-span-9 md:col-span-4">
-        <ResumeTitle title="Design" icon={<SiArtstation />} />
-        {/* web Design */}
+        <ResumeTitle title="Core Skills" icon={<SiArtstation />} />
+
         <div className="py-4">
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Web Development</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[95%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* web Development */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Web Design</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[90%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* Mobile Application */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">
-              Mobile Application
-            </p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[85%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* UI Design */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">UI Design</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[80%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
+          {[
+            { name: "Core Java / Java 17", level: "95%" },
+            { name: "Spring Boot", level: "90%" },
+            { name: "Microservices", level: "90%" },
+            { name: "API Development", level: "92%" },
+          ].map((item, i) => (
+            <div key={i} className="py-3 border-b border-zinc-700">
+              <p className="text-sm text-zinc-300 mb-1">{item.name}</p>
+              <div className="w-full bg-zinc-700 h-1 rounded">
+                <div
+                  className="h-1 bg-green-400 rounded"
+                  style={{ width: item.level }}
+                ></div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="w-full h-full hidden lgl:flex justify-center items-center">
-        <span className="w-[1px] h-full bg-zinc-800 inline-flex"></span>
+
+      <div className="hidden lgl:flex justify-center items-center">
+        <span className="w-[1px] h-full bg-zinc-700"></span>
       </div>
+
+      {/* =============== LANGUAGES =================== */}
       <div className="col-span-9 md:col-span-4">
         <ResumeTitle title="Languages" icon={<FaFlag />} />
-        {/* English */}
-        <div className="py-4">
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">English</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[100%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* Hindi */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Hindi</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[90%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* Arabic*/}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Arabic</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[70%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* French */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">French</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[60%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-        </div>
-      </div>
-      {/* =============== Design and Languages End here ===================== */}
-      {/* =============== Coading and Knowledge Start here ==================== */}
-      {/* =============== Coading and Knowledge End here ==================== */}
 
-      <div className="col-span-9 md:col-span-4">
-        <ResumeTitle title="Coding" icon={<BiCodeAlt />} />
-        {/* web Design */}
         <div className="py-4">
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">JavaScript</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[95%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* web Development */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Nodejs</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[90%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* Mobile Application */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">Reactjs</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[85%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
-          {/* UI Design */}
-          <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">TypeScript</p>
-            <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-              <span className="w-[80%] h-full absolute top-0 left-0 bg-designColor"></span>
-            </span>
-          </div>
+          {[
+            { name: "English", level: "95%" },
+            { name: "Hindi", level: "90%" },
+          ].map((item, i) => (
+            <div key={i} className="py-3 border-b border-zinc-700">
+              <p className="text-sm text-zinc-300 mb-1">{item.name}</p>
+              <div className="w-full bg-zinc-700 h-1 rounded">
+                <div
+                  className="h-1 bg-green-400 rounded"
+                  style={{ width: item.level }}
+                ></div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="w-full h-full hidden lgl:flex justify-center items-center">
-        <span className="w-[1px] h-full bg-zinc-800 inline-flex"></span>
-      </div>
+
+      {/* =============== CODING =================== */}
       <div className="col-span-9 md:col-span-4">
-        <ResumeTitle title="Knowledge" icon={<IoIosPaper />} />
-        {/* English */}
-        <ul className="py-4 flex flex-col gap-2 border-b-[1px] border-b-zinc-800">
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Website hosting
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            iOS and android apps
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Create logo design
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Design for print
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Modern and mobile-ready
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Advertising services include
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Graphics and animations
-          </li>
-          <li className="flex items-center gap-4 text-textColor">
-            <span className="text-designColor text-lg">
-              <GiCheckMark />
-            </span>
-            Search engine marketing
-          </li>
+        <ResumeTitle title="Technologies" icon={<BiCodeAlt />} />
+
+        <div className="py-4">
+          {[
+            { name: "Docker", level: "90%" },
+            { name: "Kubernetes", level: "88%" },
+            { name: "AWS / Azure", level: "85%" },
+            { name: "SQL / PL-SQL", level: "90%" },
+          ].map((item, i) => (
+            <div key={i} className="py-3 border-b border-zinc-700">
+              <p className="text-sm text-zinc-300 mb-1">{item.name}</p>
+              <div className="w-full bg-zinc-700 h-1 rounded">
+                <div
+                  className="h-1 bg-green-400 rounded"
+                  style={{ width: item.level }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="hidden lgl:flex justify-center items-center">
+        <span className="w-[1px] h-full bg-zinc-700"></span>
+      </div>
+
+      {/* =============== KNOWLEDGE =================== */}
+      <div className="col-span-9 md:col-span-4">
+        <ResumeTitle title="Expertise" icon={<IoIosPaper />} />
+
+        <ul className="py-4 flex flex-col gap-3">
+          {[
+            "Production Support & SLA Management",
+            "Technical Escalation Handling",
+            "Root Cause Analysis (RCA)",
+            "API Debugging & Performance Tuning",
+            "Monitoring (Grafana, Prometheus, ELK)",
+            "Distributed Systems & Event-Driven Architecture",
+            "Team Mentoring & Leadership",
+            "Process Governance & Documentation",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-3 text-sm text-zinc-300">
+              <span className="text-green-400 mt-1">
+                <GiCheckMark />
+              </span>
+              {item}
+            </li>
+          ))}
         </ul>
       </div>
-      {/* =============== Design and Languages End here ===================== */}
+
     </div>
   );
 };

@@ -1,20 +1,22 @@
 import React from "react";
 
-const ProjectsCard = ({ image, title, category }) => {
+const ProjectsCard = ({ title, category, image, imageClass }) => {
   return (
-    <div className="w-full py-8 flex flex-col justify-center items-center border-b-[1px] border-b-zinc-800">
-      <div className="w-full h-full mb-3 overflow-hidden relative cursor-pointer group">
+    <div className="relative group rounded-lg shadow-cardShadow overflow-visible">
+      {/* IMAGE */}
+      <div className="overflow-hidden rounded-lg">
         <img
-          className="w-full h-full object-cover scale-100 group-hover:scale-110 duration-300 cursor-pointer"
           src={image}
-          alt="ImageOne"
+          alt={title}
+          className={`w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110 ${imageClass ?? ""}`}
         />
-        <div className="w-full h-full absolute top-0 left-0 hover:bg-gradient-to-r from-green-600 via-green-600 to-green-200 opacity-20"></div>
       </div>
-      <h3 className="font-titleFont text-lg font-semibold text-[#ccc]">
-        {title}
-      </h3>
-      <p className="text-base text-gray-400 -mt-1">{category}</p>
+
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+        <p className="text-xs text-designColor font-medium">{category}</p>
+        <h3 className="text-sm font-semibold text-white mt-1">{title}</h3>
+      </div>
     </div>
   );
 };

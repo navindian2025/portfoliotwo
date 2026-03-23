@@ -2,9 +2,18 @@ import React from "react";
 
 const ResumeTitle = ({ icon, title }) => {
   return (
-    <h1 className="text-lg text-gray-300 uppercase font-medium flex items-center gap-2 py-3 border-b-[1px] border-b-zinc-800">
-      <span className="text-designColor text-2xl">{icon}</span>
-      {title}
+    <h1 className="flex items-center gap-3 py-4 mb-4 border-b border-zinc-700">
+      
+      {/* ICON */}
+      <span className="text-green-400 text-2xl bg-[#1e293b] p-2 rounded-lg shadow-md">
+        {icon}
+      </span>
+
+      {/* TITLE */}
+      <span className="text-lg md:text-xl font-semibold text-white tracking-wide uppercase">
+        {title}
+      </span>
+
     </h1>
   );
 };
